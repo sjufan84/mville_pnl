@@ -1,20 +1,12 @@
 import streamlit as st
 import pandas as pd
-from pathlib import Path
-from PIL import Image
-
 import plotly.express as px
 
 # Load in the January P & L data
-df = pd.read_csv(Path('./resources/master_filtered.csv'), index_col = [0])
+df = pd.read_csv(('./resources/master_filtered.csv'), index_col = [0])
 df['DESCRIPTION'] = df.index
 
 
-# Load in the charts
-top20var_amounts = Image.open(Path('./resources/top20_var_amounts.png'))
-top20var_percent = Image.open(Path('./resources/top20_var_pctRev.png'))
-bottom20var_amounts = Image.open(Path('./resources/top20_neg_var_amounts.png'))
-bottom20var_percent = Image.open(Path('./resources/top20_neg_var%Rev.png'))
 
 
 st.sidebar.subheader('Select a category to filter by')
