@@ -1,10 +1,8 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 from pathlib import Path
 from PIL import Image
 
-import plotly.graph_objects as go
 import plotly.express as px
 
 # Load in the January P & L data
